@@ -12,7 +12,7 @@ public class DemoLoggingAspect {
 
     /* @Before advice
     call this method for any execution method that has a signature below (point cut expression) */
-    @Before("execution(public void add*(..))")
+    @Before("execution(* spring.aop.dao.*.*(..))")
     public void beforeAddAccountAdvice() {
         System.out.println("\n ->>> Executing @Before advice on the method addAccount()");
     }
