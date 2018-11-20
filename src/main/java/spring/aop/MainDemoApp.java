@@ -26,6 +26,13 @@ public class MainDemoApp {
         membershipDAO.addMember();
         membershipDAO.goToSleep();
 
+        // call accountDAO getter/setters
+        accountDAO.setName("Billy");
+        accountDAO.setServiceCode("gold");
+
+        accountDAO.getName();
+        accountDAO.getServiceCode();
+
         // close the context
         context.close();
     }
