@@ -1,8 +1,9 @@
-package spring.aop.dao;
+package spring.aop;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring.aop.Account;
 import spring.aop.DemoConfig;
+import spring.aop.dao.AccountDAO;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class AfterReturningDemoApp {
         AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 
         // call method to find the accounts
-        List<Account> theAccounts = accountDAO.findAccounts();
+        List<Account> theAccounts = accountDAO.findAccounts(false);
 
         // display the accounts
         System.out.println("\nMethod main AfterReturningDemoApp: ");

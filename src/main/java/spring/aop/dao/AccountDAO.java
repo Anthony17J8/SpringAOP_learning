@@ -13,7 +13,13 @@ public class AccountDAO {
     private String serviceCode;
 
     // add a new method: findAccounts()
-    public List<Account> findAccounts() {
+    public List<Account> findAccounts(boolean tripWire) {
+
+        // simulate an exception
+        if (tripWire) {
+            throw new RuntimeException("Simulate exception: BOOOW");
+        }
+
         List<Account> accounts = new ArrayList<>();
 
         // create sample accounts
